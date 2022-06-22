@@ -24,7 +24,7 @@ export default function Home({ merchant, products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>hello</h1>
+        <h1>This is the Home Page</h1>
         <div>
           <h1>Merchant</h1>
           <pre>{JSON.stringify(merchant, null, 2)}</pre>
