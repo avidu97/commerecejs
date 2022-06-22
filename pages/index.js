@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { commerce } from "../src/lib/commerce";
+import ProductsList from '../components/ProductListing'
 
 export async function getStaticProps() {
   const merchant = await commerce.merchants.about();
@@ -24,13 +25,7 @@ export default function Home({ merchant, products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>This is the Home Page</h1>
-        <div>
-          <h1>Merchant</h1>
-          <pre>{JSON.stringify(merchant, null, 2)}</pre>
-          <h1>Products</h1>
-          <pre>{JSON.stringify(products, null, 2)}</pre>
-        </div>
+        <ProductsList products={products} />
       </div>
     </div>
   );
